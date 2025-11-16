@@ -1,64 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ALI's Photo Studio</title>
+    <title>Monthly Fleets Back Charge Visualization Report</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Oswald:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
-        darkMode: 'class',
         theme: {
           extend: {
+            fontFamily: {
+              'sans': ['Nunito Sans', 'Roboto', 'sans-serif'],
+              'display': ['Oswald', 'sans-serif'],
+            },
             colors: {
-              'bkg': 'hsl(var(--bkg))',
-              'content': 'hsl(var(--content))',
-              'primary': 'hsl(var(--primary))',
-              'primary-hover': 'hsl(var(--primary-hover))',
-              'secondary': 'hsl(var(--secondary))',
-              'border': 'hsl(var(--border))',
-            }
-          }
-        }
+              'primary': '#1A0A38', // Deep Indigo-Purple
+              'secondary': '#2D1E4D', // Lighter purple for cards
+              'accent': '#00BFFF',   // Electric Blue
+              'accent-secondary': '#E000E0', // Bright Magenta
+              'mute-pink': '#C75B66', // A muted pink from the theme
+              'mute-pink-hover': '#923A5A', // A darker shade for hover
+              // New Dashboard Card Palette
+              'theme-1': '#461952',
+              'theme-2': '#662249',
+              'theme-3': '#923A5A',
+              'theme-4': '#C75B66',
+              'theme-5': '#F3806C',
+              'theme-6': '#FFAD6F',
+              'theme-total': '#1D1A20',
+              // New Summary Page Colors
+              'report-bg': '#F1E8C1',
+              'report-label-bg': '#720838',
+              'report-label-hover': '#37D9FF',
+            },
+          },
+        },
       }
     </script>
-    <style>
-      :root {
-        --bkg: 222 47% 11%;
-        --content: 210 40% 98%;
-        --primary: 217 91% 60%;
-        --primary-hover: 217 91% 70%;
-        --secondary: 215 28% 17%;
-        --border: 215 28% 23%;
-      }
-      html.light {
-        --bkg: 0 0% 100%;
-        --content: 222 47% 11%;
-        --primary: 221 83% 53%;
-        --primary-hover: 221 83% 63%;
-        --secondary: 210 40% 96%;
-        --border: 214 32% 91%;
-      }
-    </style>
 
 <link rel="stylesheet" href="/index.css">
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "recharts": "https://esm.sh/recharts@2.12.7?deps=react@18.2.0",
+    "react-window": "https://esm.sh/react-window@1.8.10?deps=react@18.2.0"
   }
 }
 </script>
-  <script type="module" crossorigin src="/Ali-Photo-Studio/assets/index-9u9cNtYx.js"></script>
+  <script type="module" crossorigin src="/DashboardV/assets/index-BLfhDRyM.js"></script>
 </head>
-  <body class="bg-bkg text-content antialiased">
+  <body class="bg-primary">
     <div id="root"></div>
-</body>
+  </body>
 </html>
