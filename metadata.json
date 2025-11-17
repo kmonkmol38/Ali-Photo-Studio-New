@@ -1,0 +1,10 @@
+{
+  "homepage": "https://resotyre94.github.io/Ali-Photo-Studio",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "requestFramePermissions": [],
+  "name": "ALI's Photo Studio",
+  "description": ""
+}
